@@ -14,7 +14,7 @@ WORKDIR /tmp
 RUN /usr/bin/apt-get update && apt-get -y install git build-essential curl php5-dev php5-curl php5-mysqlnd php5-cli php5-gd php5-mcrypt php5-intl libpcre3-dev gcc make && \
     /usr/bin/apt-get -y purge git php5-dev libpcre3-dev build-essential gcc make && apt-get -y autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*
 WORKDIR /var/www
-RUN /bin/echo '<html><body><h1>It works!</h1></body></html>' > /var/www/phalcon/web/index.html
+
 
 EXPOSE 80
 EXPOSE 443
